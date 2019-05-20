@@ -1,6 +1,18 @@
 /*---- mixins ----*/
 =back-size
-	-webkit-background-size: 100%
-  -moz-background-size: 100%
-  -o-background-size: 100%
-  background-size: 100%
+	-webkit-background-size: 100% 100%
+  -moz-background-size: 100% 100%
+  -o-background-size: 100% 100%
+  background-size: 100% 100%
+
+=radius($rad)
+	-webkit-border-radius: $rad
+	-moz-border-radius: $rad
+	-ms-border-radius: $rad
+	border-radius: $rad
+
+=gradient($diraction, $color1, $olor2)
+	background: -webkit-linear-gradient($diraction, $color1, $olor2)
+	background: -moz-linear-gradient($diraction, $color1, $olor2)
+	background: -ms-linear-gradient($diraction, $color1, $olor2)
+	background: linear-gradient($diraction, $color1, $olor2)

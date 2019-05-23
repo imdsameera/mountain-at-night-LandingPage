@@ -1,11 +1,46 @@
 /*---- nav ----*/
 nav
 	height: 60px
+	z-index: 50
 
-	ul
+	#hamburger
+		display: none
+		float: left
+		margin-left: 30px
+		margin-top: 30px
+		cursor: pointer
+		transition: 0.2s
+
+		@media only screen and (max-width:768px)
+			display: block
+
+	#hamburger:hover
+		transform: scale(1.1)
+
+	#hamburger:active
+		filter: brightness(130%)
+
+	.responsive-nav
 		margin: 0
 		display: flex
 		float: right
+		padding: 0
+		z-index: 50
+		transition: 0.5s
+
+		@media only screen and (max-width:768px)
+			display: block
+			opacity: 0
+			float: left
+			width: 60%
+			height: 300px
+			position: absolute
+			top: 10%
+			left: 80px
+			background: #fff
+			+radius(10px)
+			+shadow
+			transform: rotateZ(90deg)
 
 		li
 			line-height: 60px
@@ -16,11 +51,19 @@ nav
 		li:last-child
 			margin-right: 320px
 
+			@media only screen and (max-width:768px)
+				margin: 0
+
 		a
 			display: block
 			font-size: 26px
 			font-weight: 100
 			color: $dark
+
+			@media only screen and (max-width:768px)
+				text-align: center
+				border-bottom: 1px solid #ccc
+
 
 		a::before
 			content: ""
@@ -35,7 +78,26 @@ nav
 		a:hover
 			color: $dark
 
+			@media only screen and (max-width:768px)
+				background: #eee
+
 		a:hover::before
 			width: 100%
 			opacity: 1
 			color: $dark
+
+
+
+// MENU OUT
+#menu-out
+	display: none
+
+	@media only screen and (max-width:768px)
+		background: #000
+		opacity: 0
+		width: 100%
+		height: 100vh
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1

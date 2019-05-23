@@ -4,11 +4,26 @@
 	width: 23%
 	margin-left: 12%
 	margin-top: 10%
+	position: absolute
+
+	@media only screen and (max-width:768px)
+		width: 80%
+		height: 30%
+		margin: 0
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		text-shadow: 2px 0 6px rgba(#000, 0.5)
 
 	h1
 		font-size: 42px
 		margin: 0
 		font-weight: 700
+
+		@media only screen and (max-width:768px)
+			color: #fff
+			margin: 0 auto
+			// font-size: 42px
 
 	h1::after
 		content: ""
@@ -20,12 +35,22 @@
 		border-radius: 10px
 		transition: 0.5s
 
+		@media only screen and (max-width:768px)
+			background: #fff
+
 	p
 		font-size: 16px
 		width: 100%
 		margin-top: 40px
 		color: $dark
 		line-height: 35px
+
+		@media only screen and (max-width:768px)
+			color: #fff
+			// font-size: 26px
+			margin-top: 20px
+			margin-bottom: 60px
+			line-height: 40px
 
 	a
 		margin: 50px 0
@@ -37,7 +62,8 @@
 		justify-content: center
 		box-sizing: border-box
 		+radius(70px)
-		+gradient(left, $light, $primary)
+		background: rgb(241,241,253)
+		+gradient
 		border: none
 		font-size: 26px
 		color: #fff
@@ -47,8 +73,25 @@
 		cursor: pointer
 		transition: all ease-in 0.3s
 
+		@media only screen and (max-width:768px)
+			margin: 0 auto
+			background: #fff
+			color: $primary
+			text-shadow: none
+
 	a:hover
 		background: #fff
 		color: $primary
 		border: 3px solid $primary
 		text-shadow: none
+
+		@media only screen and (max-width:768px)
+			margin: 0 auto
+			background: transparent
+			color: #fff
+			text-shadow: none
+			border: 3px solid #fff
+
+	a:active
+		transform: translateY(-10px)
+		background: rgba(#fff, 0.5s)

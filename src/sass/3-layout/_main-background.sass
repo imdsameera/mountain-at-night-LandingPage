@@ -34,6 +34,8 @@
 	margin: 0
 	top: -80px
 	right: 0
+	-webkit-animation: animation 3000ms linear both
+  animation: animation 3000ms linear both
 
 	@media only screen and (max-width:768px)
 		top: -5%
@@ -47,6 +49,7 @@
 	border-radius: 50%
 	position: absolute
 	transition: 0.5s
+	animation: starAnimation 2s infinite
 
 .star:nth-of-type(1)
 	width: 10px
@@ -70,8 +73,8 @@
 	right: 250px
 
 .star:nth-of-type(4)
-	width: 20px
-	height: 20px
+	width: 15px
+	height: 15px
 	top: 45%
 	right: 33%
 
@@ -97,3 +100,46 @@
 	height: 6px
 	top: 60%
 	right: 10%
+
+.star:nth-of-type(7)
+	width: 6px
+	height: 6px
+	top: 20%
+	right: 15%
+
+	@media only screen and (max-width:768px)
+		top: 25%
+		left: 15%
+
+.star:nth-of-type(8)
+	width: 10px
+	height: 10px
+	bottom: 5%
+	right: 55%
+
+	@media only screen and (max-width:768px)
+		bottom: 20%
+		right: 5%
+
+.star:nth-of-type(9)
+	width: 6px
+	height: 6px
+	bottom: 30%
+	left: 40%
+
+	@media only screen and (max-width:768px)
+		bottom: 28%
+		left: 30%
+
+.star:nth-of-type(10)
+	width: 6px
+	height: 6px
+	top: 3%
+	right: 15%
+
+
+// STAR ANIMATION
+@keyframes starAnimation
+	0% {box-shadow: none}
+	50% {box-shadow: 0 0 30PX 10PX #fff}
+	100% {box-shadow: none}

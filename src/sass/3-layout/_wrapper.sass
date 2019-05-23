@@ -15,6 +15,9 @@
 		transform: translate(-50%, -50%)
 		text-shadow: 2px 0 6px rgba(#000, 0.5)
 
+	@media only screen and (max-width:400px)
+		top: 35%
+
 	h1
 		font-size: 42px
 		margin: 0
@@ -44,16 +47,21 @@
 		margin-top: 40px
 		color: $dark
 		line-height: 35px
+		box-sizing: border-box
 
 		@media only screen and (max-width:768px)
 			color: #fff
-			// font-size: 26px
 			margin-top: 20px
 			margin-bottom: 60px
+			background: rgba(#fff,0.2)
+			padding: 20px
 			line-height: 40px
 
-	a
-		margin: 50px 0
+		@media only screen and (max-width:400px)
+			line-height: 25px
+
+	#explore-btn
+		margin-top: 50px
 		padding: 5px 20px
 		width: 50%
 		height: 50px
@@ -71,27 +79,26 @@
 		text-shadow: 2px 2px 6px rgba(0,0,0,0.5)
 		box-shadow: 0 0 10px rgba($dark, 0.5)
 		cursor: pointer
-		transition: all ease-in 0.3s
+		transition: 0.3s
 
-		@media only screen and (max-width:768px)
-			margin: 0 auto
+		@media only screen and (max-width: 768px)
+			margin: 0
 			background: #fff
 			color: $primary
 			text-shadow: none
 
-	a:hover
+	#explore-btn:hover
 		background: #fff
 		color: $primary
 		border: 3px solid $primary
 		text-shadow: none
 
 		@media only screen and (max-width:768px)
-			margin: 0 auto
+			margin: 0
 			background: transparent
 			color: #fff
 			text-shadow: none
 			border: 3px solid #fff
 
-	a:active
-		transform: translateY(-10px)
+	#explore-btn:active
 		background: rgba(#fff, 0.5s)

@@ -6,10 +6,14 @@ nav
 	#hamburger
 		display: none
 		float: left
-		margin-left: 30px
-		margin-top: 30px
+		// margin-left: 30px
+		// margin-top: 30px
+		position: absolute
+		top: 30px
+		left: 30px
 		cursor: pointer
 		transition: 0.2s
+		z-index: 3
 
 		@media only screen and (max-width:768px)
 			display: block
@@ -41,6 +45,7 @@ nav
 			+radius(10px)
 			+shadow
 			transform: rotateZ(90deg)
+			z-index: 50
 
 		li
 			line-height: 60px
@@ -91,13 +96,16 @@ nav
 // MENU OUT
 #menu-out
 	display: none
+	background: #000
+	opacity: 0
+	width: 100%
+	height: 100vh
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 1
+	transition: 0.5s
+	cursor: pointer
 
 	@media only screen and (max-width:768px)
-		background: #000
-		opacity: 0
-		width: 100%
-		height: 100vh
-		position: absolute
-		top: 0
-		left: 0
-		z-index: 1
+		display: none
